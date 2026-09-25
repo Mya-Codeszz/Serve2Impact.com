@@ -1,0 +1,24 @@
+{
+  "name": "User",
+  "type": "object",
+  "properties": {
+    "interests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "location": {
+      "type": "string"
+    },
+    "availability": {
+      "type": "string"
+    },
+    "onboarded": {
+      "type": "boolean"
+    },
+    "joined_crew": {
+      "type": "string"
+    }
+  }
+}

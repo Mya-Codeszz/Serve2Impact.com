@@ -1,0 +1,138 @@
+{
+  "name": "Opportunity",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "organization": {
+      "type": "string"
+    },
+    "organization_id": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "cause": {
+      "type": "string",
+      "enum": [
+        "Environment",
+        "Animals",
+        "Food Access",
+        "Education",
+        "Community",
+        "Housing",
+        "Health",
+        "Seniors",
+        "Youth",
+        "Arts & Culture",
+        "Disaster Relief",
+        "Human Rights",
+        "Technology"
+      ]
+    },
+    "causes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "neighborhood": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string",
+      "enum": [
+        "in-person",
+        "virtual",
+        "hybrid"
+      ],
+      "default": "in-person"
+    },
+    "time_commitment": {
+      "type": "string"
+    },
+    "recurring": {
+      "type": "boolean"
+    },
+    "opportunity_type": {
+      "type": "string"
+    },
+    "age_requirement": {
+      "type": "string"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "physical_activity": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "distance_km": {
+      "type": "number"
+    },
+    "spots_total": {
+      "type": "number"
+    },
+    "spots_filled": {
+      "type": "number"
+    },
+    "impact_unit": {
+      "type": "string"
+    },
+    "impact_value": {
+      "type": "number"
+    },
+    "contact": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "full",
+        "completed",
+        "draft"
+      ],
+      "default": "open"
+    }
+  },
+  "required": [
+    "title",
+    "organization",
+    "location",
+    "cause",
+    "date"
+  ]
+}

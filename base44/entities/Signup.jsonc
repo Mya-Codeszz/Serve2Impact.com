@@ -1,0 +1,58 @@
+{
+  "name": "Signup",
+  "type": "object",
+  "properties": {
+    "opportunity_id": {
+      "type": "string"
+    },
+    "opportunity_title": {
+      "type": "string"
+    },
+    "organization": {
+      "type": "string"
+    },
+    "cause": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "impact_unit": {
+      "type": "string"
+    },
+    "impact_value": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "signed_up",
+        "checked_in",
+        "completed",
+        "no_show"
+      ],
+      "default": "signed_up"
+    },
+    "checked_in_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "hours": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "opportunity_id",
+    "opportunity_title"
+  ]
+}

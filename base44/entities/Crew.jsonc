@@ -1,0 +1,36 @@
+{
+  "name": "Crew",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "cause": {
+      "type": "string"
+    },
+    "members_count": {
+      "type": "number"
+    },
+    "shared_hours": {
+      "type": "number"
+    },
+    "shared_goal": {
+      "type": "number"
+    },
+    "goal_unit": {
+      "type": "string"
+    },
+    "recent_activity": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Organization",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "about": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "cause": {
+      "type": "string",
+      "enum": [
+        "Environment",
+        "Animals",
+        "Food Access",
+        "Education",
+        "Community",
+        "Housing",
+        "Health",
+        "Seniors",
+        "Youth",
+        "Arts & Culture",
+        "Disaster Relief",
+        "Human Rights",
+        "Technology"
+      ]
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

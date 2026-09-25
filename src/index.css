@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Serve2Impact scrapbook palette */
+    --background: 0 0% 98%;             /* cool near-white */
+    --foreground: 146 32% 17%;           /* deep forest green */
+    --card: 0 0% 100%;                   /* white */
+    --card-foreground: 146 32% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 146 32% 17%;
+    --primary: 146 32% 20%;              /* forest green */
+    --primary-foreground: 45 60% 96%;
+    --secondary: 110 30% 91%;            /* very pale green */
+    --secondary-foreground: 146 32% 20%;
+    --muted: 45 40% 90%;
+    --muted-foreground: 146 14% 38%;
+    --accent: 116 30% 42%;               /* grassy green */
+    --accent-foreground: 0 0% 100%;
+    --highlight: 48 89% 57%;             /* sunny yellow */
+    --highlight-foreground: 146 32% 17%;
+    --sky: 198 53% 63%;                  /* sky blue */
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 110 20% 80%;
+    --input: 110 20% 82%;
+    --ring: 116 30% 42%;
+    --radius: 0.6rem;
+    --font-heading: "Nunito", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Nunito", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Nunito", ui-sans-serif, system-ui, sans-serif;
+    --font-hand: "Caveat", "Nunito", cursive;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    background-image:
+      radial-gradient(circle at 12% 18%, rgba(116, 187, 212, 0.06) 0, transparent 32%),
+      radial-gradient(circle at 88% 82%, rgba(244, 196, 48, 0.05) 0, transparent 30%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .font-hand {
+    font-family: var(--font-hand);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  .paper {
+    background-color: hsl(var(--card));
+    background-image:
+      repeating-linear-gradient(0deg, rgba(31,58,40,0.018) 0 1px, transparent 1px 4px),
+      repeating-linear-gradient(90deg, rgba(31,58,40,0.018) 0 1px, transparent 1px 4px);
+  }
+  .paper-cream {
+    background-color: hsl(var(--background));
+    background-image:
+      repeating-linear-gradient(0deg, rgba(31,58,40,0.020) 0 1px, transparent 1px 5px);
+  }
+  .dashed-rule {
+    border-top: 2px dashed hsl(var(--border));
+  }
+  .btn-grass {
+    @apply bg-accent text-accent-foreground hover:bg-accent/90 font-semibold;
+  }
+  .tape {
+    position: absolute;
+    width: 64px;
+    height: 20px;
+    background: rgba(244, 196, 48, 0.55);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    transform: rotate(-4deg);
+  }
+}
+
+@layer utilities {
+  .rotate-neg-3 { transform: rotate(-3deg); }
+  .rotate-pos-4 { transform: rotate(4deg); }
+  .rotate-neg-5 { transform: rotate(-5deg); }
+  .text-balance { text-wrap: balance; }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.6); }
+  60% { opacity: 1; transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes softPulse {
+  0%, 100% { opacity: 0.45; transform: scale(0.95); }
+  50% { opacity: 0.85; transform: scale(1.05); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
